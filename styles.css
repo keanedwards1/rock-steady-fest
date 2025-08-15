@@ -1,0 +1,290 @@
+/* Color system (inspired by poster) */
+:root{
+  --green:#137C3D;
+  --leaf:#1FA24F;
+  --sun:#F2E04E;
+  --red:#E23A2E;
+  --ink:#3f3d3b;
+  --paper:#fffaf4;
+  --muted:#f4ebe1;
+  --shadow: 0 10px 30px rgba(0,0,0,.15);
+}
+
+/* Reset-ish & base */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: 'Rubik', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.6;
+}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--leaf);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{width:min(1100px, 92%); margin-inline:auto}
+.skip-link{
+  position:absolute; left:-9999px; top:auto; width:1px; height:1px; overflow:hidden;
+}
+.skip-link:focus{left:1rem; top:1rem; width:auto; height:auto; padding:.5rem .75rem; background:#000; color:#fff; z-index:999}
+
+/* Header */
+.site-header{
+  position:sticky; top:0; z-index:10;
+  background:rgba(255,255,255,.96); backdrop-filter:saturate(150%) blur(6px);
+  border-bottom:1px solid #eee;
+}
+.site-header .container{
+  display:flex; align-items:center; justify-content:space-between;
+  padding:.7rem 0;
+}
+.logo{font-family: 'Montserrat', sans-serif; font-weight:800; color:var(--ink); display:flex; align-items:center; gap:.5rem}
+.logo-mark{font-size:1.3rem}
+.site-nav ul{display:flex; gap:1rem; list-style:none; margin:0; padding:0}
+.site-nav a{font-weight:600}
+
+/* Buttons */
+.btn{display:inline-block; padding:.8rem 1.1rem; border-radius:999px; border:2px solid transparent; font-weight:700; box-shadow:var(--shadow);}
+.btn-small{padding:.5rem .9rem; box-shadow:none; color: white;}
+.btn-primary{background:var(--green); color:#fff}
+.btn-primary:hover{filter:brightness(1.05)}
+.btn-outline{background:#fff; border-color:var(--green); color:var(--green)}
+.btn-outline:hover{background:var(--muted)}
+
+/* Hero */
+.hero{position:relative; isolation:isolate}
+.hero img{width:100%; height:60vh; object-fit:cover; object-position:center}
+.hero-overlay{
+  position:absolute; inset:0; display:grid; place-items:center; text-align:center;
+  padding:1rem; background:linear-gradient(180deg, rgba(0,0,0,.25), rgba(0,0,0,.45));
+}
+.tagline{
+  font-family:'Montserrat', sans-serif;
+  font-weight:800; color:#fff; letter-spacing:.02em;
+  text-shadow:0 2px 10px rgba(0,0,0,.4);
+  font-size:clamp(1.5rem, 4vw + .5rem, 3rem);
+  margin:0 0 1rem 0;
+}
+.cta-row{display:flex; gap:1rem; flex-wrap:wrap; justify-content:center}
+
+/* Sections */
+section{padding:3.5rem 0}
+.program{background:linear-gradient(0deg,var(--muted),#fff)}
+.program h2, .about h2, .tickets h2, .map h2 {font-family:'Montserrat',sans-serif;font-weight:800}
+.program-list{list-style:none; padding:0; margin:1rem 0; display:grid; gap:1.25rem}
+.program-list h3{margin:.2rem 0 .4rem 0; color:var(--green)}
+.fine-print{opacity:.8; font-size:.95rem}
+
+.hero {
+    padding: 0 !important;
+}
+
+.tickets .grid-2{display:grid; gap:2rem; grid-template-columns: 1.1fr .9fr}
+.ticket-list{list-style:none; padding:0; margin:0 0 1rem 0}
+.ticket-actions{display:flex; gap:.8rem; flex-wrap:wrap}
+.qr{margin:0; text-align:center}
+.qr figcaption{font-size:.9rem; opacity:.8; margin-top:.3rem}
+
+.map-embed{margin-top:1rem; border-radius:14px; overflow:hidden; box-shadow:var(--shadow)}
+.map-embed iframe{width:100%; height:380px; border:0}
+
+/* Footer */
+.site-footer{
+  background:var(--green); color:#fff; padding:1.5rem 0;
+}
+.footer-grid{
+  display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap;
+}
+.site-footer a{color:#fff; text-decoration:underline}
+.site-footer ul{list-style:none; display:flex; gap:1rem; margin:0; padding:0}
+
+/* Utilities */
+.grid-2{display:grid; grid-template-columns:1fr 1fr; gap:2rem}
+
+/* Responsive */
+@media (max-width: 900px){
+  .hero img{height:56vh}
+  .tickets .grid-2, .grid-2{grid-template-columns:1fr}
+}
+
+/* === CHANGES: keep header links on one line & vertically centered === */
+.site-nav ul{
+  display:flex;
+  align-items:center;          /* NEW */
+  gap:1rem;
+  list-style:none;
+  margin:0;
+  padding:0;
+  flex-wrap:nowrap;            /* NEW: prevent wrap so button stays on same line */
+}
+.site-nav li{                  /* NEW: make each li center its anchor */
+  display:flex;
+  align-items:center;
+}
+.site-nav a{
+  font-weight:600;
+  display:flex;                /* NEW */
+  align-items:center;          /* NEW */
+  line-height:1;               /* NEW: avoid baseline misalignment */
+  padding:.45rem .25rem;       /* NEW: small, even click targets for non-button links */
+}
+
+/* === CHANGES: button polish + hover/focus states === */
+.btn{
+  display:inline-flex;         /* NEW: better vertical centering */
+  align-items:center;          /* NEW */
+  justify-content:center;      /* NEW */
+  padding:.8rem 1.1rem;
+  border-radius:999px;
+  border:2px solid transparent;
+  font-weight:700;
+  background-color:var(--green);
+  color:#fff;
+  box-shadow:var(--shadow);
+  transition:
+    transform .18s ease,
+    box-shadow .18s ease,
+    background-color .18s ease,
+    color .18s ease,
+    border-color .18s ease;    /* NEW */
+}
+
+.header-btn {
+    font-size:1rem;              /* NEW: consistent size with other header links */
+    padding: .75rem 1rem !important;         /* NEW: smaller padding for header buttons */
+    box-shadow:none;             /* NEW: no shadow for header buttons */
+    color:#fff;                  /* NEW: keep white text for header buttons */
+}
+
+/* Primary */
+.btn-primary:hover,
+.btn-primary:focus-visible{
+  transform:translateY(-1px);  /* NEW: lift */
+  box-shadow:0 14px 34px rgba(0,0,0,.18); /* NEW: stronger shadow */
+  text-decoration:none;        /* NEW */
+}
+.btn-primary:active{
+  transform:translateY(0);     /* NEW: press */
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+}
+
+/* Outline */
+.btn-outline{
+  background:#fff;
+  border-color:var(--green);
+  color:var(--green);
+}
+.btn-outline:hover,
+.btn-outline:focus-visible{
+  background:var(--green);     /* NEW: invert on hover */
+  color:#fff;
+  transform:translateY(-1px);  /* NEW */
+  box-shadow:0 14px 34px rgba(0,0,0,.12);
+}
+.btn-outline:active{
+  transform:translateY(0);
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+/* Small button keeps white text */
+.btn-small{ color:#fff; }
+
+/* Accessibility: clear focus ring for keyboard users */
+.btn:focus-visible,
+.site-nav a:focus-visible{
+  outline:3px solid color-mix(in oklab, var(--sun) 60%, white);
+  outline-offset:2px;
+}
+
+/* Respect users who prefer less motion */
+@media (prefers-reduced-motion: reduce){
+  .btn{ transition:none }
+}
+
+/* NEW: screen-reader-only helper */
+.sr-only{
+  position:absolute !important; width:1px; height:1px; padding:0; margin:-1px;
+  overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0;
+}
+
+/* NEW: mobile toggle button (hidden on desktop) */
+.nav-toggle{
+  display:none;
+  align-items:center; justify-content:center;
+  width:44px; height:44px; margin-left:auto;
+  background:#fff; border:2px solid var(--green); border-radius:10px;
+}
+.nav-toggle .bar{
+  display:block; width:22px; height:2px; background:var(--green); margin:3px 0; transition:transform .18s ease, opacity .18s ease;
+}
+
+/* Make container positioning context for dropdown */
+.site-header .container{ position:relative; }
+
+/* --- Mobile layout --- */
+@media (max-width: 720px){
+  .nav-toggle{ display:inline-flex; }
+  .site-nav{
+    position:absolute; left:0; right:0; top:100%;
+    background:#fff; border-bottom:1px solid #eee;
+    box-shadow:0 10px 30px rgba(0,0,0,.06);
+    display:none;
+  }
+  /* open state */
+  .site-header[data-nav-open="true"] .site-nav{ display:block; }
+  .site-header[data-nav-open="true"] .nav-toggle .bar:nth-child(2){ opacity:0; }
+  .site-header[data-nav-open="true"] .nav-toggle .bar:nth-child(1){ transform:translateY(5px) rotate(45deg); }
+  .site-header[data-nav-open="true"] .nav-toggle .bar:nth-child(3){ transform:translateY(-5px) rotate(-45deg); }
+
+  /* vertical menu on mobile */
+  .site-nav ul{ flex-direction:column; align-items:stretch; gap:.25rem; padding:.25rem 0; }
+  .site-nav a{ padding:.9rem 1rem; }
+  .site-nav .btn{ width:calc(100% - 2rem); margin:.25rem 1rem .9rem; text-align:center; }
+}
+
+/* Small tweak so header content stays aligned on one row when space allows */
+.site-nav ul{ flex-wrap:nowrap; }
+
+/* === CHANGE: clean, true "hamburger" icon === */
+.nav-toggle{
+  display:none;                            /* stays hidden on desktop */
+  width:44px; height:44px;
+  padding:0; margin-left:auto;
+  background:transparent;                  /* remove odd white box */
+  border:0;                                /* remove border */
+  color:var(--green);                      /* bars inherit this color */
+  align-items:center; justify-content:center;
+  flex-direction:column; gap:3px;          /* STACK the bars */
+  border-radius:9999px;
+}
+.nav-toggle:hover{                         /* subtle hover circle */
+  background:rgba(19,124,61,.08);
+}
+.nav-toggle .bar{
+  display:block;
+  width:24px; height:2px;
+  background:currentColor;                 /* uses --green */
+  border-radius:2px;
+  transition:transform .22s ease, opacity .22s ease;
+  transform-origin:center;
+}
+
+/* FIX: make hamburger fold into an X (accounts for the sr-only span) */
+.site-header[data-nav-open="true"] .nav-toggle .bar:nth-child(3){ /* middle bar */
+  opacity:0;
+  transform:scaleX(.6);
+}
+.site-header[data-nav-open="true"] .nav-toggle .bar:nth-child(2){ /* top bar */
+  transform:translateY(11px) rotate(45deg);
+  opacity: 1;
+}
+.site-header[data-nav-open="true"] .nav-toggle .bar:nth-child(4){ /* bottom bar */
+  transform:translateY(-11px) rotate(-45deg);
+}
+
+
+/* keep previous mobile rules; just ensure the toggle shows on phones */
+@media (max-width: 720px){
+  .nav-toggle{ display:inline-flex; }
+}
