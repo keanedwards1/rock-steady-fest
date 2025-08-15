@@ -4,6 +4,21 @@
   "cleanUrls": true,
   "trailingSlash": false,
 
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static" },
+    { "src": "styles.css", "use": "@vercel/static" },
+    { "src": "script.js", "use": "@vercel/static" },
+    { "src": "public/**", "use": "@vercel/static" },
+    { "src": "styles/**", "use": "@vercel/static" },
+    { "src": "js/**", "use": "@vercel/static" },
+    { "src": "pages/**", "use": "@vercel/static" }
+  ],
+
+  "routes": [
+    { "src": "/index.html", "dest": "/index.html" },
+    { "src": "/", "dest": "/index.html" }
+  ],
+
   "redirects": [
     { "source": "/index.html", "destination": "/", "permanent": true },
     {
