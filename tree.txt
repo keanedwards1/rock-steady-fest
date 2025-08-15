@@ -1,0 +1,17 @@
+.
+├── index.html
+├── js
+├── pages
+├── public
+│   ├── icons
+│   └── images
+│       ├── back.jpg
+│       ├── front.jpg
+│       ├── home.jpg
+│       └── qr.png
+├── script.js
+├── styles
+├── styles.css
+└── tree.txt
+
+7 directories, 8 files
