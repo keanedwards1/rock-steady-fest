@@ -102,6 +102,71 @@ section{padding:3.5rem 0}
 /* Utilities */
 .grid-2{display:grid; grid-template-columns:1fr 1fr; gap:2rem}
 
+/* ✅ UPDATED: Flyer section (integrated card layout) */
+.flyer{
+  padding:3.5rem 0;
+  background:linear-gradient(0deg, var(--muted), #fff);
+}
+
+.flyer-grid{
+  display:grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap:2rem;
+  align-items:center;
+}
+
+.flyer-copy h2{
+  font-family:'Montserrat',sans-serif;
+  font-weight:800;
+  margin:0 0 .6rem 0;
+}
+
+.flyer-copy p{
+  margin:0 0 1.2rem 0;
+  max-width:42ch;
+  opacity:.92;
+}
+
+.flyer-actions{
+  display:flex;
+  gap:.8rem;
+  flex-wrap:wrap;
+  align-items:center;
+}
+
+/* “Card” treatment that matches your shadows/radius system */
+.flyer-card{
+  margin:0;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  background:var(--paper);
+  border:1px solid rgba(0,0,0,.06);
+}
+
+.flyer-card img{
+  width:100%;
+  height:auto;
+  display:block;
+}
+
+/* small polish: card hover feels alive but subtle */
+.flyer-card:hover{
+  transform:scale(1.01);
+  transition:transform .18s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce){
+  .flyer-card:hover{ transform:none; transition:none; }
+}
+
+@media (max-width: 900px){
+  .flyer-grid{ grid-template-columns:1fr; }
+  .flyer-card{ transform:none; }
+}
+
+
+
 /* Responsive */
 @media (max-width: 900px){
   .hero img{height:56vh}

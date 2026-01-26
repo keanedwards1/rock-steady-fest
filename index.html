@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <!-- Basic SEO -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>RockSteadyFest Olema — Alcohol-Free Live Music • Sept 20</title>
-  <meta name="description" content="RockSteadyFest Olema is an alcohol-free, drug-free outdoor concert featuring F.A.T. Betty, local artists, and a youth concert. Sept 20 at Sacred Heart Church, Olema." />
-  <link rel="canonical" href="https://example.com/" /> <!-- TODO: set your domain -->
+  <meta name="description"
+    content="RockSteadyFest Olema is an alcohol-free, drug-free outdoor concert featuring F.A.T. Betty, local artists, and a youth concert. Sept 20 at Sacred Heart Church, Olema." />
+  <link rel="canonical" href="https://www.rocksteadyfest.org/" /> <!-- TODO: set your domain -->
 
   <!-- Open Graph / Twitter -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="RockSteadyFest Olema — Alcohol-Free Live Music • Sept 20" />
-  <meta property="og:description" content="Skip the alcohol, enjoy the music. Youth concert, live bands, DJs & dance. Sept 20 • Olema." />
+  <meta property="og:description"
+    content="Skip the alcohol, enjoy the music. Youth concert, live bands, DJs & dance. Sept 20 • Olema." />
   <meta property="og:image" content="assets/og-cover.jpg" /> <!-- TODO -->
   <meta property="og:url" content="https://example.com/" /><!-- TODO -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -23,7 +26,9 @@
   <!-- Performance hints -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Rubik:wght@400;600&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Rubik:wght@400;600&display=swap"
+    rel="stylesheet" />
 
   <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
@@ -71,28 +76,29 @@
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- Header -->
-<header class="site-header">
-  <div class="container">
-    <a class="logo" href="#top" aria-label="RockSteadyFest Home">
-      <span class="logo-mark" aria-hidden="true">🎵</span> RockSteadyFest
-    </a>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="#top" aria-label="RockSteadyFest Home">
+        <span class="logo-mark" aria-hidden="true">🎵</span> RockSteadyFest
+      </a>
 
-    <!-- NEW: mobile menu toggle button -->
-    <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
-      <span class="sr-only">Toggle menu</span>
-      <span class="bar"></span><span class="bar"></span><span class="bar"></span>
-    </button>
+      <!-- NEW: mobile menu toggle button -->
+      <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu">
+        <span class="sr-only">Toggle menu</span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
 
-    <nav class="site-nav" aria-label="Primary">
-      <!-- CHANGED: added id for a11y & JS -->
-      <ul id="primary-menu">
-        <li><a href="#who">Who we are</a></li>
-        <li><a href="#map">Map</a></li>
-        <li><a class="btn btn-small header-btn" target="_blank" rel="noopener" href="https://events.humanitix.com/rock-steady-fest-olema/tickets">Buy Tickets</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
+      <nav class="site-nav" aria-label="Primary">
+        <!-- CHANGED: added id for a11y & JS -->
+        <ul id="primary-menu">
+          <li><a href="#who">Who we are</a></li>
+          <li><a href="#map">Map</a></li>
+          <li><a class="btn btn-small header-btn" target="_blank" rel="noopener"
+              href="https://events.humanitix.com/rock-steady-fest-olema/tickets">Buy Tickets</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
 
   <!-- Hero: “one sentence across the back of card” -->
@@ -106,11 +112,42 @@
     <div class="hero-overlay">
       <p class="tagline">Skip the alcohol, enjoy the music.</p>
       <div class="cta-row">
-        <a class="btn btn-primary" target="_blank" rel="noopener" href="https://events.humanitix.com/rock-steady-fest-olema/tickets">Buy Tickets</a>
+        <a class="btn btn-primary" target="_blank" rel="noopener"
+          href="https://events.humanitix.com/rock-steady-fest-olema/tickets">Buy Tickets</a>
         <a class="btn btn-outline" href="#who">Who we are</a>
       </div>
     </div>
   </section>
+
+  <!-- Flyer -->
+  <section class="flyer" aria-labelledby="flyer-title">
+    <div class="container flyer-grid">
+      <div class="flyer-copy">
+        <h2 id="flyer-title">Acoustic Guitar Concert</h2>
+        <p>
+          Acoustic Guitar Concert • April 25 at 7pm<br>
+          Studio Fourth Street, 1569 4th Street, San Rafael<br>
+          Featuring Daphne Moore &amp; Tyler Allen, plus special guest
+        </p>
+
+
+        <div class="flyer-actions">
+          <a class="btn btn-primary" target="_blank" rel="noopener"
+            href="https://events.humanitix.com/rock-steady-fest-olema/tickets">Get tickets</a>
+
+          <!-- Optional, only if you add the PDF to /public/posters/... -->
+          <!-- <a class="btn btn-outline" href="/posters/acoustic-concert.pdf" target="_blank" rel="noopener">Open PDF</a> -->
+        </div>
+      </div>
+
+      <figure class="flyer-card">
+        <img src="/public/images/rocksteadyfest-poster.webp" alt="RockSteadyFest flyer" loading="lazy"
+          decoding="async" />
+      </figure>
+    </div>
+  </section>
+
+
 
   <main id="main">
     <!-- Program Highlights -->
@@ -124,7 +161,8 @@
           </li>
           <li>
             <h3>Music <time datetime="2025-09-20T15:30">3:30–6:00pm</time></h3>
-            <p>Chelsea the Piper • Tyler Allen • Chris Holbrook • Jesse DeNatale • Sara Rodenburg • Nicolette Gottuso • Nicole Frazer • Tom Finch • Danielle Vantress Salk (poet) • Kristy Greenwood (poet) + special guests</p>
+            <p>Chelsea the Piper • Tyler Allen • Chris Holbrook • Jesse DeNatale • Sara Rodenburg • Nicolette Gottuso •
+              Nicole Frazer • Tom Finch • Danielle Vantress Salk (poet) • Kristy Greenwood (poet) + special guests</p>
           </li>
           <li>
             <h3>Music, DJ &amp; Dance <time datetime="2025-09-20T18:30">6:30–8:00pm</time></h3>
@@ -138,7 +176,8 @@
     <section class="about" id="who" aria-labelledby="who-title">
       <div class="container">
         <h2 id="who-title">Who we are</h2>
-        <p>RockSteadyFest is a co-op of local and sober artists who believe in the healing power of alcohol- and drug-free live performances.</p>
+        <p>RockSteadyFest is a co-op of local and sober artists who believe in the healing power of alcohol- and
+          drug-free live performances.</p>
         <p class="fine-print">Special thanks to Sacred Heart Church.</p>
       </div>
     </section>
@@ -154,7 +193,8 @@
           </ul>
           <div class="ticket-actions">
             <!-- TODO: swap link for your ticketing platform -->
-            <a class="btn btn-primary" target="_blank" rel="noopener" href="https://events.humanitix.com/rock-steady-fest-olema/tickets">Buy Tickets Online</a>
+            <a class="btn btn-primary" target="_blank" rel="noopener"
+              href="https://events.humanitix.com/rock-steady-fest-olema/tickets">Buy Tickets Online</a>
             <a class="btn btn-outline" href="tel:+15303750004">Call: 530&nbsp;375&nbsp;0004</a>
             <a class="btn btn-outline" href="mailto:csmusicfest@gmail.com">Email</a>
           </div>
@@ -171,12 +211,11 @@
     <section class="map" id="map" aria-labelledby="map-title">
       <div class="container">
         <h2 id="map-title">Location &amp; Parking</h2>
-        <p><strong>Sacred Heart Church (on the lawn)</strong><br>10189 CA-1, Olema — Lots of parking! Lawn chairs welcome.</p>
+        <p><strong>Sacred Heart Church (on the lawn)</strong><br>10189 CA-1, Olema — Lots of parking! Lawn chairs
+          welcome.</p>
         <!-- Simple, privacy-friendly Google Maps embed -->
         <div class="map-embed" role="application" aria-label="Map to Sacred Heart Church, Olema">
-          <iframe
-            title="Google Map — Sacred Heart Church, Olema"
-            loading="lazy"
+          <iframe title="Google Map — Sacred Heart Church, Olema" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
             src="https://www.google.com/maps?q=Sacred%20Heart%20Church%2010189%20CA-1%20Olema&output=embed">
           </iframe>
@@ -201,4 +240,5 @@
 
   <script src="script.js" defer></script>
 </body>
+
 </html>
