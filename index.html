@@ -93,9 +93,12 @@
         <ul id="primary-menu">
           <li><a href="#who">Who we are</a></li>
           <li><a href="#map">Map</a></li>
-          <li><a class="btn btn-small header-btn" target="_blank" rel="noopener"
-              href="https://events.humanitix.com/acoustic-guitars-concert/tickets?_gl=1*15kgpk1*_gcl_au*MTIwOTE3NzQxOC4xNzY0NjEwNDc4*_ga*MTE1ODcyMzI4NC4xNzY0NjEwNDc5*_ga_LHKW5FR9N6*czE3Njk3OTIzNDIkbzQkZzEkdDE3Njk3OTYwNjkkajUkbDAkaDA.">Buy
-              Tickets</a></li>
+          <li>
+            <button class="btn btn-small header-btn ticket-trigger" type="button" data-open-ticket-modal
+              aria-haspopup="dialog" aria-controls="tickets-modal">
+              Buy Tickets
+            </button>
+          </li>
         </ul>
       </nav>
     </div>
@@ -105,18 +108,23 @@
   <!-- Hero: “one sentence across the back of card” -->
   <section class="hero" id="top" aria-label="Hero">
     <picture>
-      <source srcset="/public/images/rocksteadyfest-poster-2.webp" media="(min-width: 900px)">
-      <img class="hero-img" src="/public/images/rocksteadyfest-poster-2.webp" alt="Festival poster artwork"
+      <source srcset="/public/images/april-25-festival-info.png" media="(min-width: 900px)">
+      <img class="hero-img" src="/public/images/april-25-festival-info.png" alt="April 25 RockSteadyFest event poster"
         loading="eager" decoding="async">
     </picture>
 
     <div class="hero-overlay">
       <div class="hero-actions container">
-        <div class="cta-row">
-          <a class="btn btn-primary" target="_blank" rel="noopener"
-            href="https://events.humanitix.com/acoustic-guitars-concert/tickets?_gl=1*15kgpk1*_gcl_au*MTIwOTE3NzQxOC4xNzY0NjEwNDc4*_ga*MTE1ODcyMzI4NC4xNzY0NjEwNDc5*_ga_LHKW5FR9N6*czE3Njk3OTIzNDIkbzQkZzEkdDE3Njk3OTYwNjkkajUkbDAkaDA.">Buy
-            Tickets</a>
-          <a class="btn btn-outline" href="#who">Who we are</a>
+        <div class="hero-panel">
+          <p class="hero-panel-kicker">RockSteadyFest San Rafael</p>
+          <h2 id="april-header-title">April 25, 2026</h2>
+          <p>Acoustic Guitars Concert at Studio Fourth Street. Doors open at 6:30pm, music starts at 7:00pm.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" target="_blank" rel="noopener"
+              href="https://events.humanitix.com/acoustic-guitars-concert/tickets?_gl=1*15kgpk1*_gcl_au*MTIwOTE3NzQxOC4xNzY0NjEwNDc4*_ga*MTE1ODcyMzI4NC4xNzY0NjEwNDc5*_ga_LHKW5FR9N6*czE3Njk3OTIzNDIkbzQkZzEkdDE3Njk3OTYwNjkkajUkbDAkaDA.">Buy
+              Tickets</a>
+            <a class="btn btn-outline" href="#who">Who we are</a>
+          </div>
         </div>
       </div>
     </div>
@@ -160,13 +168,13 @@
     <!-- Program Highlights -->
     <section class="program" id="program" aria-labelledby="program-title">
       <div class="container">
-        <h2 id="program-title">Friday April 25 — Schedule</h2>
+        <h2 id="program-title">Saturday, April 25 — Schedule</h2>
         <ul class="program-list" role="list">
           <li>
-            <h3>Acoustic Concert <time datetime="2026-04-25T19:00">7:00–9:00pm</time></h3>
+            <h3>Acoustic Concert <time datetime="2026-04-25T19:00">7:00pm start</time></h3>
             <p>
-              <strong>Daphne Moore</strong> &amp; <strong>Tyler Allen</strong>, plus a special guest —
-              intimate acoustic guitar performances in a cozy studio setting.
+              Doors open at 6:30pm. Featuring <strong>Daphne Moore</strong>, <strong>Tyler Allen</strong>,
+              <strong>Chelsea the Piper</strong>, plus a special guest.
             </p>
           </li>
         </ul>
@@ -178,9 +186,11 @@
     <section class="about" id="who" aria-labelledby="who-title">
       <div class="container">
         <h2 id="who-title">Who we are</h2>
-        <p>RockSteadyFest is a co-op of local and sober artists who believe in the healing power of alcohol- and
-          drug-free live performances.</p>
-        <p class="fine-print">Special thanks to Studio Fourth Street</p>
+        <p>RockSteadyFest is a co-op of local artists creating alcohol-free, substance-free spaces for music and arts
+          in Marin County.</p>
+        <p>Our events are built to support connection, wellness, and positive community engagement for youth, families,
+          and people in recovery who are often excluded from traditional music events.</p>
+        <p class="fine-print">From intimate acoustic nights to outdoor community concerts across Marin County.</p>
       </div>
     </section>
 
@@ -229,7 +239,144 @@
       </div>
     </section>
 
+    <!-- Press -->
+    <section class="press" id="press" aria-labelledby="press-title">
+      <div class="container">
+        <h2 id="press-title">Press</h2>
+        <p>Coverage from the RockSteadyFest Olema event:</p>
+        <div class="press-grid">
+          <article class="press-card">
+            <h3>Pacific Sun</h3>
+            <p>RockSteadyFest returns with teen classic rockers F.A.T. Betty.</p>
+            <a target="_blank" rel="noopener"
+              href="https://pacificsun.com/rocksteadyfest-returns-with-teen-classic-rockers-f-a-t-betty/">Read
+              article</a>
+          </article>
+          <article class="press-card">
+            <h3>Marin Independent Journal</h3>
+            <p>West Marin resident organizes substance-free festival.</p>
+            <a target="_blank" rel="noopener"
+              href="https://www.marinij.com/2025/09/18/west-marin-resident-organizes-substance-free-festival/?share=rif1uwviam2eacmsiew8">Read
+              article</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- May Event Hero -->
+    <section class="hero hero-may" id="may-event" aria-label="May event hero">
+      <picture>
+        <source srcset="/public/images/may-30-and-31-festival-info.png" media="(min-width: 900px)">
+        <img class="hero-img" src="/public/images/may-30-and-31-festival-info.png"
+          alt="May 30 and 31 RockSteadyFest event poster" loading="lazy" decoding="async">
+      </picture>
+      <div class="hero-overlay hero-overlay-may">
+        <div class="container">
+          <div class="hero-panel">
+            <p class="hero-panel-kicker">RockSteadyFest Point Reyes</p>
+            <h2 id="may-header-title">May 30-31, 2026</h2>
+            <p>A two-day, all-ages outdoor gathering centered on alcohol-free and substance-free live music.</p>
+            <div class="cta-row">
+              <a class="btn btn-primary" target="_blank" rel="noopener"
+                href="https://events.humanitix.com/point-reyes-rocksteadyfest/tickets">Buy Tickets</a>
+              <a class="btn btn-outline" href="#may-map">Location</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- May Program -->
+    <section class="program" id="may-program" aria-labelledby="may-program-title">
+      <div class="container">
+        <h2 id="may-program-title">RockSteadyFest Point Reyes — Schedule</h2>
+        <ul class="program-list" role="list">
+          <li>
+            <h3>Saturday, May 30 <time datetime="2026-05-30T15:00">3:00–7:00pm</time></h3>
+            <p>
+              Tyler Allen, Chelsea the Piper, Daphne Moore, Mofles, Nicolette Gottuso, Coastal Dave, and Wendy DiWitt
+              &amp; Kurt Harwood.
+            </p>
+          </li>
+          <li>
+            <h3>Sunday, May 31 <time datetime="2026-05-31T15:00">3:00–6:00pm</time></h3>
+            <p>
+              Youth bands, special guests, and dancing in an all-ages, substance-free community setting.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- May Tickets -->
+    <section class="tickets" id="may-tickets" aria-labelledby="may-tickets-title">
+      <div class="container grid-2">
+        <div>
+          <h2 id="may-tickets-title">RockSteadyFest Point Reyes — Tickets</h2>
+          <ul class="ticket-list" role="list">
+            <li><strong>Saturday:</strong> $15 advance, $18 at the door, $10 youth</li>
+            <li><strong>Sunday:</strong> Youth under 18 free, adults $12</li>
+          </ul>
+          <div class="ticket-actions">
+            <a class="btn btn-primary" target="_blank" rel="noopener"
+              href="https://events.humanitix.com/point-reyes-rocksteadyfest/tickets">Buy Tickets Online</a>
+            <a class="btn btn-outline" href="tel:+15303750004">Call: 530&nbsp;375&nbsp;0004</a>
+            <a class="btn btn-outline" href="mailto:csmusicfest@gmail.com">Email</a>
+          </div>
+        </div>
+        <figure class="qr">
+          <img src="public/images/may-qr.png" alt="Scan for May event tickets" loading="lazy" decoding="async" />
+          <figcaption>Scan to buy Point Reyes tickets</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- May Location -->
+    <section class="map" id="may-map" aria-labelledby="may-map-title">
+      <div class="container">
+        <h2 id="may-map-title">RockSteadyFest Point Reyes — Location</h2>
+        <p>
+          <strong>West Marin-Inverness School</strong><br>
+          11550 Shoreline Hwy, Point Reyes Station, CA 94956
+        </p>
+        <div class="map-embed" role="application" aria-label="Map to West Marin-Inverness School">
+          <iframe title="Google Map — West Marin-Inverness School" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=11550%20Shoreline%20Hwy%20Point%20Reyes%20Station%20CA%2094956&output=embed">
+          </iframe>
+        </div>
+      </div>
+    </section>
+
   </main>
+
+  <div class="ticket-modal" id="tickets-modal" aria-hidden="true">
+    <div class="ticket-modal-backdrop" data-close-ticket-modal></div>
+    <section class="ticket-modal-panel" role="dialog" aria-modal="true" aria-labelledby="tickets-modal-title">
+      <button class="ticket-modal-close" type="button" data-close-ticket-modal aria-label="Close ticket chooser">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <p class="ticket-modal-eyebrow">Choose Your Event</p>
+      <h2 id="tickets-modal-title">Buy RockSteadyFest Tickets</h2>
+      <p class="ticket-modal-copy">Select the event you want to attend.</p>
+
+      <div class="ticket-option-grid">
+        <a class="ticket-option" target="_blank" rel="noopener"
+          href="https://events.humanitix.com/acoustic-guitars-concert/tickets">
+          <span class="ticket-option-date">April 25, 2026</span>
+          <strong>Acoustic Guitars Concert</strong>
+          <span>Studio Fourth Street • San Rafael</span>
+        </a>
+
+        <a class="ticket-option" target="_blank" rel="noopener"
+          href="https://events.humanitix.com/point-reyes-rocksteadyfest/tickets">
+          <span class="ticket-option-date">May 30-31, 2026</span>
+          <strong>Point Reyes RockSteadyFest</strong>
+          <span>West Marin-Inverness School • Point Reyes Station</span>
+        </a>
+      </div>
+    </section>
+  </div>
 
   <!-- Footer -->
   <footer class="site-footer">

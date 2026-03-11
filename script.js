@@ -40,3 +40,68 @@ document.addEventListener('DOMContentLoaded', () => {
     }));
   }
 });
+
+// Ticket chooser modal
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('tickets-modal');
+  const openButtons = document.querySelectorAll('[data-open-ticket-modal]');
+  const closeButtons = document.querySelectorAll('[data-close-ticket-modal]');
+  const navToggle = document.querySelector('.nav-toggle');
+  const header = document.querySelector('.site-header');
+  const closeButton = modal?.querySelector('.ticket-modal-close');
+  const focusableSelector = 'a[href], button:not([disabled]), [tabindex]:not([tabindex="-1"])';
+  let lastFocused = null;
+
+  if (!modal || !openButtons.length || !closeButton) return;
+
+  const trapFocus = e => {
+    if (e.key !== 'Tab') return;
+    const focusable = Array.from(modal.querySelectorAll(focusableSelector));
+    if (!focusable.length) return;
+
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  };
+
+  const closeModal = () => {
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('ticket-modal-open');
+    document.removeEventListener('keydown', onKeydown);
+    if (lastFocused) lastFocused.focus();
+  };
+
+  const onKeydown = e => {
+    if (e.key === 'Escape') {
+      e.preventDefault();
+      closeModal();
+      return;
+    }
+    trapFocus(e);
+  };
+
+  const openModal = () => {
+    lastFocused = document.activeElement;
+    if (header) header.setAttribute('data-nav-open', 'false');
+    if (navToggle) navToggle.setAttribute('aria-expanded', 'false');
+
+    modal.classList.add('is-open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('ticket-modal-open');
+    closeButton.focus();
+    document.addEventListener('keydown', onKeydown);
+  };
+
+  openButtons.forEach(button => button.addEventListener('click', openModal));
+  closeButtons.forEach(button => button.addEventListener('click', closeModal));
+  modal.querySelectorAll('.ticket-option').forEach(link => {
+    link.addEventListener('click', closeModal);
+  });
+});
