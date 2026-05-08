@@ -62,7 +62,11 @@ a:hover{text-decoration:underline}
 .btn-outline:hover{background:var(--muted)}
 
 /* Hero */
-.hero{position:relative; isolation:isolate}
+.hero{
+  position:relative;
+  isolation:isolate;
+  display:grid;
+}
 /* ✅ CHANGE: hero image uses its natural height */
 .hero-img{
   width:100%;
@@ -71,17 +75,17 @@ a:hover{text-decoration:underline}
   object-position:center;
 }
 
-/* ✅ CHANGE: lighter overlay tint (and only over the image area) */
+/* Hero panel sits below the poster instead of overlaying it. */
 .hero-overlay{
-  position:absolute;
-  inset:0;
+  position:static;
   display:grid;
   place-items:center;
   text-align:center;
-  padding:1rem;
+  padding:1rem 0 1.5rem;
+  background:var(--paper);
 }
 
-/* ✅ NEW: buttons sit below the image */
+/* Keep the April action panel breathing below its poster. */
 .hero-actions{
   padding-top:1rem;
   padding-bottom:0;
